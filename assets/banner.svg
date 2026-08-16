@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="rgb(167,139,250)" stop-opacity="0.34"/>
+      <stop offset="45%" stop-color="rgb(167,139,250)" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0a0b0d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="640" fill="#0a0b0d"/>
+  <rect width="1280" height="640" fill="url(#g)"/>
+  <text x="640" y="300" text-anchor="middle"
+        font-family="Sora, Manrope, Segoe UI, Arial, sans-serif"
+        font-size="72" font-weight="700" letter-spacing="-1.5">
+    <tspan fill="#ffffff">FIL</tspan><tspan> </tspan><tspan fill="#a78bfa">MORA</tspan>
+  </text>
+  <text x="640" y="360" text-anchor="middle" fill="#9ca3af"
+        font-family="Manrope, Segoe UI, Arial, sans-serif"
+        font-size="22" font-weight="500">Free Download · Last Update · Windows Version</text>
+</svg>
