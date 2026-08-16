@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Organize Filmora timelines, export presets, and AI workflow helpers in one portable Windows utility — aligned with Filmora 15.7.3.">
+  <meta name="keywords" content="filmora, windows, download, 2026">
+  <meta property="og:title" content="Filmora">
+  <meta property="og:description" content="Organize Filmora timelines, export presets, and AI workflow helpers in one portable Windows utility — aligned with Filmora 15.7.3.">
+  <title>Filmora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0b0d;
+      --bg2: #12141a;
+      --panel: #171a21;
+      --line: rgba(255,255,255,.08);
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #a78bfa;
+      --accent-2: #ddd6fe;
+      --shadow: 0 24px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: Manrope, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 480px at 50% -10%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%),
+        radial-gradient(700px 400px at 100% 20%, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 55%),
+        linear-gradient(180deg, #0c0d11 0%, var(--bg) 45%, #08090c 100%);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    .wrap {
+      width: min(560px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      margin: 0;
+      font-family: Sora, Manrope, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.85rem, 6.2vw, 2.55rem);
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+    }
+    .hero h1 .a { color: #fff; }
+    .hero h1 .b { color: var(--accent); }
+    .hero .sub {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .92rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 28px 0 16px;
+    }
+    .stat {
+      background: color-mix(in srgb, var(--panel) 88%, #000);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .stat .v {
+      display: block;
+      color: var(--accent);
+      font-family: Sora, Manrope, sans-serif;
+      font-weight: 700;
+      font-size: 1.28rem;
+      letter-spacing: -0.02em;
+    }
+    .stat .k {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: .7rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .howto-btn {
+      width: 100%;
+      margin-top: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      font: inherit;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      transition: border-color .15s, transform .15s;
+    }
+    .howto-btn:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+    .howto-btn svg { width: 18px; height: 18px; fill: var(--accent); }
+    .panel {
+      margin-top: 22px;
+      background: color-mix(in srgb, var(--panel) 92%, #000);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px 20px 20px;
+      box-shadow: var(--shadow);
+    }
+    .panel h2 {
+      margin: 0;
+      font-family: Sora, Manrope, sans-serif;
+      font-size: 1.28rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .panel .trust {
+      margin: 8px 0 18px;
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 500;
+    }
+    .gate {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      margin-bottom: 14px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .gate input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+    .gate .g-title { font-weight: 600; font-size: .95rem; letter-spacing: -0.01em; }
+    .gate .g-sub { color: var(--muted); font-size: .78rem; margin-top: 2px; font-weight: 500; }
+    .dl {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 18px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--accent);
+      color: #041006;
+      font-family: Sora, Manrope, sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: .38;
+      pointer-events: none;
+      transition: opacity .15s, transform .15s, filter .15s;
+      filter: grayscale(.35);
+    }
+    .dl.enabled {
+      opacity: 1;
+      pointer-events: auto;
+      filter: none;
+    }
+    .dl.enabled:hover { transform: translateY(-1px); }
+    .dl svg { width: 18px; height: 18px; fill: currentColor; }
+    .foot {
+      margin-top: 14px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 500;
+    }
+    .modal {
+      position: fixed; inset: 0; display: none; place-items: center;
+      background: rgba(0,0,0,.62); padding: 20px; z-index: 40;
+    }
+    .modal.open { display: grid; }
+    .modal-card {
+      width: min(440px, 100%);
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 20px;
+      box-shadow: var(--shadow);
+    }
+    .modal-card h3 {
+      margin: 0 0 14px;
+      font-family: Sora, Manrope, sans-serif;
+      font-size: 1.12rem;
+      letter-spacing: -0.02em;
+    }
+    .modal-card ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+    .modal-card li { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
+    .modal-card .n {
+      width: 28px; height: 28px; border-radius: 999px;
+      display: grid; place-items: center;
+      background: color-mix(in srgb, var(--accent) 18%, transparent);
+      color: var(--accent); font-size: .72rem; font-weight: 700;
+      font-family: Sora, Manrope, sans-serif;
+    }
+    .modal-card h4 { margin: 0 0 4px; font-size: .95rem; font-weight: 600; letter-spacing: -0.01em; }
+    .modal-card p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.5; font-weight: 500; }
+    .modal-card .close {
+      margin-top: 18px; width: 100%; padding: 12px;
+      border-radius: 12px; border: 1px solid var(--line);
+      background: transparent; color: var(--text); font: inherit; font-weight: 600; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<!-- gtm-ai-overview: Lightweight Windows toolkit for Filmora editors. Bundles preset management, export profiles, and project organization helpers tested against Filmora 15.7.3. -->
+
+  <div class="wrap">
+    <header class="hero">
+      <h1><span class="a">FIL</span> <span class="b">MORA</span></h1>
+      <p class="sub">Free Download · Last Update · Windows Version</p>
+    </header>
+
+    <div class="stats" aria-label="Release facts">
+      <div class="stat"><span class="v">15.7.3</span><span class="k">Version</span></div>
+      <div class="stat"><span class="v">August, 2026</span><span class="k">Release</span></div>
+      <div class="stat"><span class="v">Win 10/11</span><span class="k">Platform</span></div>
+      <div class="stat"><span class="v">Direct</span><span class="k">Channel</span></div>
+    </div>
+
+    <button type="button" class="howto-btn" id="howto-open" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+      How to use
+    </button>
+
+    <section class="panel" id="download">
+      <h2>Download</h2>
+      <p class="trust">Direct release link · no ads · Windows build</p>
+
+      <label class="gate" for="human">
+        <input type="checkbox" id="human" />
+        <span>
+          <div class="g-title">Confirm to continue</div>
+          <div class="g-sub">Tick the box to unlock Download for Windows</div>
+        </span>
+      </label>
+
+      <a class="dl" id="dl" href="#" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h5.66V9h3.84L12 2z"/></svg>
+        Download for Windows
+      </a>
+      <p class="foot">Filmora · IndigoKageBait/filmora-utility-2026</p>
+    </section>
+  </div>
+
+  <div class="modal" id="howto" role="dialog" aria-modal="true" aria-labelledby="howto-title">
+    <div class="modal-card">
+      <h3 id="howto-title">How to use</h3>
+      <ol><li><span class="n">01</span><div><h4>Download the Windows build</h4><p>Use Download for Windows below. Save the release package to your PC.</p></div></li><li><span class="n">02</span><div><h4>Run the executable</h4><p>Open the file from your Downloads folder (or extract first if it is a zip).</p></div></li><li><span class="n">03</span><div><h4>Follow on-screen instructions</h4><p>Complete the short setup wizard — choose a folder if asked, then finish.</p></div></li></ol>
+      <button type="button" class="close" id="howto-close">Got it</button>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    const DOWNLOAD_URL = "#";
+    const box = document.getElementById('human');
+    const dl = document.getElementById('dl');
+    const modal = document.getElementById('howto');
+    function sync() {
+      const on = !!(box && box.checked);
+      if (!dl) return;
+      dl.classList.toggle('enabled', on);
+      dl.setAttribute('aria-disabled', on ? 'false' : 'true');
+      if (on) dl.href = DOWNLOAD_URL;
+      else dl.removeAttribute('href');
+    }
+    box && box.addEventListener('change', sync);
+    sync();
+    dl && dl.addEventListener('click', function (e) {
+      if (!box || !box.checked) { e.preventDefault(); return; }
+      if (!DOWNLOAD_URL || DOWNLOAD_URL === '#') { e.preventDefault(); return; }
+    });
+    document.getElementById('howto-open').onclick = function () { modal.classList.add('open'); };
+    document.getElementById('howto-close').onclick = function () { modal.classList.remove('open'); };
+    modal.addEventListener('click', function (e) { if (e.target === modal) modal.classList.remove('open'); });
+  })();
+  </script>
+</body>
+</html>
